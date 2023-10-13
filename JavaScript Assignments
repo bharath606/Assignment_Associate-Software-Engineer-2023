@@ -1,0 +1,165 @@
+1.	 	Take a sentence as an input and reverse every word in that sentence. 
+      Example - This is a sunny day > shiT si a ynnus yad ?
+
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    
+                    <head>
+                        <meta charset="UTF-8">
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                        <title>Reverse Words in Sentence</title>
+                        <style>
+                            body {
+                                font-family: Arial, sans-serif;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: center;
+                                height: 100vh;
+                                margin: 0;
+                            }
+                    
+                            .input-container {
+                                display: flex;
+                                margin-bottom: 20px;
+                            }
+                    
+                            #inputSentence {
+                                padding: 10px;
+                                font-size: 16px;
+                                border: 1px solid #ccc;
+                                border-radius: 5px;
+                                margin-right: 10px;
+                                width: 300px;
+                            }
+                    
+                            #reverseButton {
+                                padding: 10px 20px;
+                                font-size: 16px;
+                                background-color: #4CAF50;
+                                color: white;
+                                border: none;
+                                border-radius: 5px;
+                                cursor: pointer;
+                            }
+                    
+                            #reverseButton:hover {
+                                background-color: #45a049;
+                            }
+                    
+                            #outputSentence {
+                                font-size: 18px;
+                            }
+                        </style>
+                    </head>
+                    
+                    <body>
+                        <h2>Reverse Words in Sentence</h2>
+                        <div class="input-container">
+                            <input type="text" id="inputSentence" placeholder="Enter a sentence">
+                            <button id="reverseButton">Reverse</button>
+                        </div>
+                        <p id="outputSentence"></p>
+                    
+                        <script>
+                            document.getElementById("reverseButton").addEventListener("click", function() {
+                                var inputSentence = document.getElementById("inputSentence").value;
+                                var words = inputSentence.split(' ');
+                    
+                                for (var i = 0; i < words.length; i++) {
+                                    words[i] = words[i].split('').reverse().join('');
+                                }
+                    
+                                var reversedSentence = words.join(' ');
+                                document.getElementById("outputSentence").textContent = reversedSentence;
+                            });
+                        </script>
+                    </body>
+                    
+                    </html>
+
+
+2.	 Perform sorting of an array in descending order. 
+
+                  <!DOCTYPE html>
+                  <html lang="en">
+                  
+                  <head>
+                      <meta charset="UTF-8">
+                      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                      <title>Sort Array in Descending Order</title>
+                      <style>
+                          body 
+                          {
+                              font-family: Arial, sans-serif;
+                              display: flex;
+                              flex-direction: column;
+                              align-items: center;
+                              justify-content: center;
+                              height: 100vh;
+                              margin: 0;
+                          }
+                  
+                          .input-container {
+                              display: flex;
+                              margin-bottom: 20px;
+                          }
+                  
+                          #inputArray {
+                              padding: 10px;
+                              font-size: 16px;
+                              border: 1px solid #ccc;
+                              border-radius: 5px;
+                              margin-right: 10px;
+                              width: 300px;
+                          }
+                  
+                          #sortButton {
+                              padding: 10px 20px;
+                              font-size: 16px;
+                              background-color: #4CAF50;
+                              color: white;
+                              border: none;
+                              border-radius: 5px;
+                              cursor: pointer;
+                          }
+                  
+                          #sortButton:hover {
+                              background-color: #45a049;
+                          }
+                  
+                          #outputArray {
+                              font-size: 18px;
+                          }
+                      </style>
+                  </head>
+                  
+                  <body>
+                      <h2>Sort Array in Descending Order</h2>
+                      <div class="input-container">
+                          <input type="text" id="inputArray" placeholder="Enter numbers separated by commas">
+                          <button id="sortButton">Sort</button>
+                      </div>
+                      <p id="outputArray"></p>
+                  
+                      <script>
+                          document.getElementById("sortButton").addEventListener("click", function() {
+                              var inputArray = document.getElementById("inputArray").value;
+                              var numbers = inputArray.split(',').map(function(num) {
+                                  return parseInt(num.trim(), 10);
+                              });
+                  
+                              numbers.sort(function(a, b) {
+                                  return b - a;
+                              });
+                  
+                              var sortedArray = numbers.join(', ');
+                              document.getElementById("outputArray").textContent = "Sorted Array: " + sortedArray;
+                          });
+                      </script>
+                  </body>
+                  
+                  </html>
+
+
+		 
